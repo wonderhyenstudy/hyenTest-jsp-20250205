@@ -26,6 +26,47 @@ dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+    // 20260202 외부기능 추가1
+    // https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl
+    implementation group: 'jstl', name: 'jstl', version: '1.2'
+
+    // 20260202 마리아DB 연결도구 외부기능 추가2
+    // https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.5.3'
+
+    // 20260203 Lombok 연결도구 외부기능 추가3
+    // 컴파일 단위, 테스트 단위, 2개 설정 예시
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.38'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.38'
+
+    // test, 단위 테스트에서도, 사용하기.
+    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.38'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.38'
+
+    // 20260203 Hikari Cp 연결도구 외부기능 추가4
+    //Hikari Cp 설치
+    // https://mvnrepository.com/artifact/com.zaxxer/HikariCP
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: '6.3.0'
+
+    // 20260204 ModelMapper 연결도구 외부기능 추가5
+    // 모델 맵퍼, DTO <-> VO 변환 해주는 도구.
+    // https://mvnrepository.com/artifact/org.modelmapper/modelmapper
+    implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.2.4'
+
+    // 20260204 logging 연결도구 외부기능 추가6
+    // 로깅 도구, 내가 지정한 레벨 등급에 따라서 기록을 다르게 처리 가능.
+    // logging 라이브러리,Log4j2,
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '3.0.0-beta2'
+
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '3.0.0-beta2'
+
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl
+    testImplementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '3.0.0-beta2'
+
+
 }
 
 test {
