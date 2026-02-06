@@ -1,4 +1,4 @@
-package com.busanit501.jsp_server_project_260205.ConnectionUtil;
+package com.busanit501.jsp_server_project_260205.domain;
 
 import lombok.*;
 

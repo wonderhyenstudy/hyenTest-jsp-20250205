@@ -1,4 +1,4 @@
-package com.busanit501.jsp_server_project_260205.todo.controller;
+package com.busanit501.jsp_server_project_260205.controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

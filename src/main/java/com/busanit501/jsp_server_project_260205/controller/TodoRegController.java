@@ -1,4 +1,4 @@
-package com.busanit501.jsp_server_project_260205.todo.controller;
+package com.busanit501.jsp_server_project_260205.controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name="TodoDeleteController", urlPatterns = "/todo/delete")
-public class TodoDeleteController extends HttpServlet {
+@WebServlet(name="TodoRegController", urlPatterns = "/todo/register")
+public class TodoRegController extends HttpServlet {
     // 어떻게 보여줄꺼야???
     //doGet / doPost
 
@@ -16,8 +16,8 @@ public class TodoDeleteController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        super.doGet(req, resp);
-        System.out.println("삭제화면을 뿌려줘");
-        req.getRequestDispatcher("/WEB-INF/todo/modify.jsp").forward(req, resp);
+        System.out.println("리스트화면을 뿌려줘");
+        req.getRequestDispatcher("/WEB-INF/todo/reg.jsp").forward(req, resp);
 
     }
 }
